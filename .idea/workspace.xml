@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a43167ad-2be7-4bf9-8254-4a9f687bff0a" name="Default Changelist" comment="" />
+    <list default="true" id="a43167ad-2be7-4bf9-8254-4a9f687bff0a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -125,6 +130,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1n9T21JVUKNNK0aCxINbLoKV7Dl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -152,7 +158,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610801095270</updated>
-      <workItem from="1610801096679" duration="21107000" />
+      <workItem from="1610801096679" duration="22260000" />
+      <workItem from="1610878520205" duration="53000" />
+      <workItem from="1610893493107" duration="801000" />
+      <workItem from="1611393495097" duration="1871000" />
     </task>
     <servers />
   </component>
@@ -164,6 +173,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1090" y="273" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610806774363" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1610878570946">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610878570946" />
     <state x="606" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610816523714">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
