@@ -20,8 +20,8 @@ use \App\Http\Controllers\AuthController;
     return $request->user();
 });*/
 
-Route::get("auth/register", [AuthController::class, 'register']);
-Route::get("auth/login", [AuthController::class, 'login']);
+Route::post("auth/register", [AuthController::class, 'register']);
+Route::post("auth/login", [AuthController::class, 'login']);
 
 Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::get("auth/getUser", [AuthController::class, 'getUser']);

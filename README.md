@@ -22,8 +22,28 @@ https://laravel.com/docs/8.x/sanctum#installation
     'passwords' => 'users',
 ], //'guard' => 'web' to 'guard' => 'api',
 
-
-- Example Request
+- Example Register - POST
+>http://laravelapi.test/api/auth/register
+```json
+{
+  "username": "muratcakmak",
+  "name": "Murat Çakmak",
+  "email": "muratcakmak@hotmail.com",
+  "password": "1234"
+}
+```
+- Example Login - POST
+>http://laravelapi.test/api/auth/login
+```json
+{
+  "username": "muratcakmak",
+  "password": "1234",
+  "device_name": "galaxy s7"
+}
+```
+- Example Get User - GET
 > http://laravelapi.test/api/auth/getUser
-
-> Headers -> Authorization : Bearer 5|wtfuj9LcHt94WhdeMx4FHXh6g5lWB1BQriB7yE9W
+```
+> Headers Add
+Authorization : Bearer 7|9cROpRF7vOu2ShkWwNTMzdOhOQDFEi9yadgJRZ5f
+```

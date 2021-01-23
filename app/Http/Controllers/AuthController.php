@@ -13,42 +13,53 @@ class AuthController extends Controller
 {
     function register(Request $request){
         $validator= Validator::make($request->all(),[
+            'username' => 'required',
             'name' => 'required',
             'email' => 'required|email',
             'password' => 'required',
         ]);
 
         if($validator->fails()){
-            return response()->json(["status_code" => 400, "İstek Hatası"]);
+            return response()->json(["status" => 0, "message" => "İstek Hatası"]);
+        }
+
+        if(User::where("email", $request->email)->exists()){
+            return response()->json(["status" => 0, "message" => "This email address already exists."]);
+        }
+
+        if(User::where("username", $request->username)->exists()){
+            return response()->json(["status" => 0, "message" => "This username already exists."]);
         }
 
         $newUser = new User;
+        $newUser->username = $request->username;
         $newUser->name = $request->name;
         $newUser->email = $request->email;
         $newUser->password = Hash::make($request->password);
         $newUser->save();
 
-        return response()->json(["status_code" => 200, "Başarıyla Kayıt Olundu"]);
+        return response()->json(["status" => 1, "message" => "Signed up successfully."]);
     }
 
     function login(Request $request){
 
         $validator = Validator::make($request->all(),[
-            'email' => 'required|email',
+            //'email' => 'required|email',
+            'username' => 'required',
             'password' => 'required',
             'device_name' => 'required'
         ]);
 
         if($validator->fails()){
-            return response()->json(["status_code" => 400, "İstek Hatası"]);
+            return response()->json(["status" => 0, "message" => "İstek Hatası"]);
         }
 
-        $user = User::where('email', $request->email)->first(); //mail var mı ?
+        $user = User::where('username', $request->username)->first(); //username var mı ?
 
-        if($user && Hash::check($request->password, $user->password)){ //mail varsa ve şifreler doğruysa
-            return $user->createToken($request->device_name)->plainTextToken; //bu usere ait bir token yarat.
+        if($user && Hash::check($request->password, $user->password)){ //username varsa ve şifreler doğruysa
+            return response()->json(["status" => 1, "token" => $user->createToken($request->device_name)->plainTextToken]); //bu usere ait bir token yarat.
         }else{
-            return response()->json(["status_code" => 401, "Kimlik doğrulaması başarısız"]);
+            return response()->json(["status" => 0, "message" => "Kimlik doğrulaması başarısız"]);
         }
 
     }
