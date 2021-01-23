@@ -1,4 +1,4 @@
-## Laravel API WITH SANCTUM
+## Laravel API With Sanctum
 
 Laravel Version 8.22.1
 
