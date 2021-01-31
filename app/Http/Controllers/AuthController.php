@@ -67,4 +67,8 @@ class AuthController extends Controller
     function getUser(Request $request){
         return Auth::user(); //Request deki Authorization daki Token bilgisinden usera ulaşır.
     }
+
+    function testapi(){
+        return "test ok";
+    }
 }
