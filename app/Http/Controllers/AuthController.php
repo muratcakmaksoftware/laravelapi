@@ -13,10 +13,10 @@ class AuthController extends Controller
 {
     function register(Request $request){
         $validator= Validator::make($request->all(),[
-            'username' => 'required',
             'name' => 'required',
-            'email' => 'required|email',
+            'username' => 'required',
             'password' => 'required',
+            'email' => 'required|email',
         ]);
 
         if($validator->fails()){
